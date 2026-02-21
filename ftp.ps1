@@ -790,7 +790,7 @@ function Invoke-FTPDownload {
       Write-XYProgress 0.20 'Connected via SFTP'
 
       if ($downloadMode -eq 'file') {
-        $null = $filesToDownload.Add(@{ Path = $remotePath; Name = [System.IO.Path]::GetFileName($remotePath) })
+        $null = $filesToDownload.Add(@{ Path = $remotePath; Name = [System.IO.Path]::GetFileName($remotePath); Size = 0 })
       }
       elseif ($downloadMode -eq 'folder') {
         Write-XYProgress 0.22 "Listing remote files in: $remotePath"
@@ -863,7 +863,7 @@ function Invoke-FTPDownload {
       Write-XYProgress 0.20 'Connected via FTPS (Implicit TLS)'
 
       if ($downloadMode -eq 'file') {
-        $null = $filesToDownload.Add(@{ Path = $remotePath; Name = [System.IO.Path]::GetFileName($remotePath) })
+        $null = $filesToDownload.Add(@{ Path = $remotePath; Name = [System.IO.Path]::GetFileName($remotePath); Size = 0 })
       }
       elseif ($downloadMode -eq 'folder') {
         Write-XYProgress 0.22 "Listing remote files in: $remotePath"
@@ -939,7 +939,7 @@ function Invoke-FTPDownload {
       Write-XYProgress 0.20 "Connected via $($protocol.ToUpper())$(if ($enableSsl) { ' (Explicit TLS)' } else { '' })"
 
       if ($downloadMode -eq 'file') {
-        $null = $filesToDownload.Add(@{ Path = $remotePath; Name = [System.IO.Path]::GetFileName($remotePath) })
+        $null = $filesToDownload.Add(@{ Path = $remotePath; Name = [System.IO.Path]::GetFileName($remotePath); Size = 0 })
       }
       elseif ($downloadMode -eq 'folder') {
         Write-XYProgress 0.22 "Listing remote files in: $remotePath"
