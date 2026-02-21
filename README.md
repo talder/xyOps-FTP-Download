@@ -656,6 +656,12 @@ This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md)
 
 ## Version History
 
+### v1.0.1 (2026-02-21)
+- **Bug fix:** Fixed missing `.Size` property error when downloading a single file
+- Single file downloads now correctly initialize file objects with `Size = 0` before download
+- Actual file size is captured after download completes
+- Affects all protocols: FTP, FTPS (Explicit/Implicit), SFTP
+
 ### v1.0.0 (2026-02-21)
 - Initial release
 - **3 protocols:** FTP (plain), FTPS (Explicit + Implicit TLS), SFTP (SSH)
