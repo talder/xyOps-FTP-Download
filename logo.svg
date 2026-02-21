@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8E2DE2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A00E0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect width="512" height="512" fill="url(#bgGrad)" rx="80"/>
+
+  <!-- Title text -->
+  <text x="256" y="110" font-family="Arial, sans-serif" font-size="88" font-weight="bold" fill="#FFFFFF" text-anchor="middle">FTP</text>
+
+  <!-- Hexagon outer (semi-transparent) -->
+  <polygon points="256,130 360,190 360,310 256,370 152,310 152,190" fill="white" opacity="0.15" stroke="white" stroke-width="3"/>
+  <!-- Hexagon inner (white fill) -->
+  <polygon points="256,150 340,200 340,300 256,350 172,300 172,200" fill="white" opacity="0.9"/>
+
+  <!-- Font Awesome download icon (fa-solid fa-download) centered in hexagon -->
+  <!-- Hexagon center is at (256, 250), icon scaled and centered -->
+  <g transform="translate(256, 250) scale(0.18) translate(-256, -256)">
+    <path fill="#6B20B0" d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/>
+  </g>
+
+  <!-- Subtitle text -->
+  <text x="256" y="440" font-family="Arial, sans-serif" font-size="88" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Download</text>
+  <text x="256" y="470" font-family="Arial, sans-serif" font-size="16" fill="#b388ff" text-anchor="middle" letter-spacing="4">xyOps Plugin</text>
+</svg>
